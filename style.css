@@ -31,6 +31,13 @@ body {
   background-color: #252525;
   height: 1200px;
 }
+.menu-icon {
+  width: 22px;
+  margin-left: 20px;
+  display: none;
+  /* color: white; */
+  background: #f8f8f8;
+}
 
 .containerr {
   max-width: 1100px;
@@ -317,5 +324,31 @@ button {
     margin-top: 20px;
     padding: 25px;
     border-radius: 25px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  nav ul {
+    position: absolute;
+    top: 130px;
+    left: 0px;
+    background: #0151cc;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 50px 10px 0px;
+  }
+  nav ul li a {
+    color: #fff;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .bt {
+    display: none;
   }
 }
