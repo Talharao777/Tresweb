@@ -27,8 +27,11 @@
       <header class="header bgimg">
         <nav class="navbar">
           <div class="container">
-            <div class="logo"><img src="./Task-Assets/logo.png" alt="" /> <h1 class="name">albedo</h1></div>
-            <ul class="nav">
+            <div class="logo">
+              <img src="./Task-Assets/logo.png" alt="" />
+              <h1 class="name">albedo</h1>
+            </div>
+            <ul class="nav" id="menuitems">
               <li class="nav-item">
                 <a href="#intro" class="nav-link">Intro</a>
               </li>
@@ -48,7 +51,13 @@
                 <a href="#" class="nav-link">Contacts</a>
               </li>
             </ul>
-            <button type="button">BUY IT NOW</button>
+            <button class="bt" type="button">BUY IT NOW</button>
+            <img
+              src="./Task-Assets/menu.png"
+              class="menu-icon"
+              onclick="menutoggle()"
+              alt=""
+            />
           </div>
         </nav>
         <section class="intro" id="intro">
@@ -174,5 +183,16 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var menuitems = document.getElementById("menuitems");
+      menuitems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (menuitems.style.maxHeight == "0px") {
+          menuitems.style.maxHeight = "200px";
+        } else {
+          menuitems.style.maxHeight = "0px";
+        }
+      }
+    </script>
   </body>
 </html>
